@@ -1,5 +1,4 @@
 name: Deploy to GitHub Pages
-
 on:
   push:
     branches: [main]
@@ -22,17 +21,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 22.12.0
-
-      - run: npm ci
-
-      - run: npx vite build
-
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-
       - uses: actions/deploy-pages@v4
+      
+      - run: npm ci
+      - run: npx vite build
