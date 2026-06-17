@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/cosmora-health-main/',
+  base: '/website1/',
   plugins: [react(), tailwindcss()],
 })
